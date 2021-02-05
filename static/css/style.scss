@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap');
+
+$black: #1f1f1f;
+$gray: #928196;
+$purple: #D22EFF;
+$light-purple: #E894FF;
+$dark-purple: #981eb9;
+$yellow: #f8e217;
+$light-yellow: #f0e2a2;
+$dark-yellow: #a0790e;
+
+body {
+  background-color: $black;
+  color: white;
+  font-family: 'JetBrains Mono', monospace;
+  padding-bottom: 50vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $purple;
+}
+
+h1 {
+  color: $purple;
+}
+
+h4 {
+  color: $dark-purple;
+}
+
+img {
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+}
+
+hr {
+  border-color: white;
+}
+
+a {
+  color: $light-purple;
+  margin-right: 1ch;
+
+  &:hover {
+    color: $purple;
+  }
+
+  &:not(nav *)::after {
+    position: absolute; /* Prevent underline of arrow */
+    margin-left: 2px;
+    content: "\21d7"; /* Unicode hex for &raquo; */
+    // font-size: 75%;
+  }
+
+  &.yellow {
+    &:hover {
+      color: $light-yellow;
+    }
+  }
+}
+
+.yellow {
+  color: $yellow;
+}
+
+.border {
+  border-radius: 8px;
+  border: none !important;
+}
+
+.shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.8) !important;
+}
+
+// #imagemodal {
+//   // $image-margin: 50px;
+//   // margin: $image-margin;
+
+//   .modal-dialog {
+//     width: 100%;
+//     height: 100%;
+//     margin: 0;
+//     padding: 0;
+//   }
+  
+//   .modal-content {
+//     height: auto;
+//     min-height: 100%;
+//     border-radius: 0;
+//     width: 100%;
+//   }
+
+//   img {
+//     cursor: default;
+//   }
+// }
+
+img.preview {
+  cursor: pointer;
+}
